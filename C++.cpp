@@ -1,14 +1,20 @@
-#include "C++.h"
+#include <iostream>
+#include <string.h>
 using namespace std;
 
+class tree{
+    public:
+    tree(int num){
+        cout<< num <<endl;
+        cout<<"你好"<<endl;
+    }
+    public:
+    int a;
+};
+
 int main(){
-    point a;
-    a.x=2;
-    a.y=9;
-    circle b;
-    b.x=4;
-    b.y=8;
-    b.bianchang=6.4;
-    b.bijiao(a);
-    system("pause");
+    int a=1;
+    tree branch1(a);
+    tree branch2 = tree(1);
+    
 }
