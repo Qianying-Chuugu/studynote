@@ -3,23 +3,33 @@
 using namespace std;
 
 class tree{
-    public:
+
+    friend void seed(tree &branch);
+
+    private:
     int a;
     int b;
     int c;
     static double num;
     public:
-    static void test1 (tree &exm){
-        num=99;
-        exm.a=1;
+    tree():a(1),b(9),c(8){
+
+    }
+    public:
+    void test1 (){
+        
+       
         cout<<"yes"<<endl;
     }
 };
 
-double tree::num = 100;
+void seed(tree &branch){
+    cout<<branch.a<<" "<<branch.b<<""<<endl;
+}
+
 
 int main(){
     tree branch;
-    tree::test1(branch);
-    cout<<branch.a<<" "<<tree::num<<endl;
+    seed(branch);
+    
 }
